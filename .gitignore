@@ -1,3 +1,5 @@
 
 
 notebook/*.csv
+__pycache__/
+
