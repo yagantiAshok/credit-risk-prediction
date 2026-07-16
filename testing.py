@@ -1,4 +1,8 @@
 
-from credit_risk.logger import logger
+# class Test:
+#     x = 100
 
-logger.info("This is first message")
+#     def show(self):
+#         print(x)
+# ob = Test()
+# print(ob.show())
