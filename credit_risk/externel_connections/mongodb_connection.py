@@ -22,7 +22,7 @@ class MongodbClient:
                 MongodbClient.client.admin.command("ping")
                 logger.info("Mongodb connection established successfully")
             self.client = MongodbClient.client
-            self.db = self.client[data_base]
+            self.database = self.client[data_base]
         except Exception as e:
             raise CustomException(e,sys)
 
