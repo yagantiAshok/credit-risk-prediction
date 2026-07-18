@@ -13,5 +13,17 @@ train_columns:
   NumberOfTime60-89DaysPastDueNotWorse :  int64  
   NumberOfDependents                   :  float64
 
-traget_column:
+target_column:
   target: SeriousDlqin2yrs
+
+numeric_columns:
+  - RevolvingUtilizationOfUnsecuredLines 
+  - age                                      
+  - NumberOfTime30-59DaysPastDueNotWorse     
+  - DebtRatio                              
+  - MonthlyIncome                          
+  - NumberOfOpenCreditLinesAndLoans          
+  - NumberOfTimes90DaysLate                  
+  - NumberRealEstateLoansOrLines             
+  - NumberOfTime60-89DaysPastDueNotWorse     
+  - NumberOfDependents                     

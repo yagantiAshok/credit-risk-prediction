@@ -28,4 +28,14 @@ class DataValidationConfig:
     data_validation_filepath:str = os.path.join(data_validation_main_folder,DATA_VALIDATION_VALIDATION_FOLDER,DATA_VALIDAION_VALIDATION_FILEPATH)
     data_validation_drift_filepath : str = os.path.join(data_validation_main_folder,DATA_VALIDATION_DRIFT_FOLDER,DATA_VALIDATION_DRIFT_FILE_PATH)
     data_validation_data_mismatch_filepath: str = os.path.join(data_validation_main_folder,DATA_VALIDATION_DATA_MISMATCH_FOLDER,DATA_VALIDATION_DATA_MISMATCH_FILEPATH)
+@dataclass
+class DataTransformationConfig:
+    data_transformation_main_folder:str = os.path.join(trainingpipelineconfig.artifcat,DATA_TRANSFORMATION_MAIN_FOLDER)
+    data_transformation_tranformed_trainfilepath:str = os.path.join(data_transformation_main_folder,DATA_TRANSFORMATION_TRANSFORMED_FOLDER,DATA_TRANSFORMATION_TRANSFORMED_TRIAN_FILRPATH)
+    data_transformation_transformed_validation_filepath:str = os.path.join(data_transformation_main_folder,DATA_TRANSFORMATION_TRANSFORMED_FOLDER,DATA_TRANSFORMATION_TRANSFORMED_VALIDATION_FILEPATH)
+    data_tranformation_preprocesses_obj_filepath:str = os.path.join(data_transformation_main_folder,DATA_TRANSFORMATION_PREPROCEESS_OBJECT_FOLDER,DATA_TRANSFORMATION_PREPROCESSED_OBJECT_FILEPATH)
+@dataclass
+class ModelTrainingConfig:
+    model_training_main_folder:str = os.path.join(trainingpipelineconfig.artifcat,MODEL_TRAINING_MAIN_FOLDER)
+    model_training_trained_model_object_filepath:str = os.path.join(model_training_main_folder,MODEL_TRAINING_TRAINED_MODEL_FOLDER,MODEL_TRAINING_TRAININED_MODLE_OBJECT_FILE_PATH)
     
