@@ -22,3 +22,8 @@ class ModelTrainingArtifcat:
     recall:float
     accuracy:float
     precision:float
+@dataclass
+class ModelEvaluationArtifact:
+    is_model_accepted:bool
+    changed_score:float
+    new_model:str

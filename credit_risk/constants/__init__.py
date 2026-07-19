@@ -10,6 +10,13 @@ VALIDATION_FILE_NAME = "customers_validation.csv"
 TEST_FILE_NAME = "customers_test.csv"
 SCHEMA_FILE = os.path.join("config","schema.yaml")#config\schema.yaml
 MODEL_FILE = os.path.join("config","model.yaml")
+TARGET_COLUMN = "SeriousDlqin2yrs"
+
+AWS_ACCESS_KEY_ID = "AWS_ACCESS_KEY_ID"
+AWS_SECERET_ACCESS_KEY_ID = "AWS_SECRET_ACCESS_KEY"
+region = "eu-north-1"
+AWS_S3_BUSCKET_NAME = "creditriskprojectbucket"
+MODEL_NAME  = "model.joblib"
 
 """
 DATA INGESTION CONSTANTS STARTS WITH DATA INGETSION
@@ -54,3 +61,7 @@ MODEL TRAINING RELATED CONSTANTS STARTS WITH MODEL TRAINING
 MODEL_TRAINING_MAIN_FOLDER :str = "model_training"
 MODEL_TRAINING_TRAINED_MODEL_FOLDER = "trained_model"
 MODEL_TRAINING_TRAININED_MODLE_OBJECT_FILE_PATH:str = "model.joblib"
+
+"MODEL EVLAUTAUION CONSTANTS START WITH MODEL EVALUATION"
+MODEL_EVALUTAION_MAIN_FOLDER:str = "model_evalutaion"
+MODLE_EVALUTAION_MODEL_ACCEPTED_FILEPATH:str = "model_acception.txt"

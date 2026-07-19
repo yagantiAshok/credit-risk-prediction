@@ -38,4 +38,7 @@ class DataTransformationConfig:
 class ModelTrainingConfig:
     model_training_main_folder:str = os.path.join(trainingpipelineconfig.artifcat,MODEL_TRAINING_MAIN_FOLDER)
     model_training_trained_model_object_filepath:str = os.path.join(model_training_main_folder,MODEL_TRAINING_TRAINED_MODEL_FOLDER,MODEL_TRAINING_TRAININED_MODLE_OBJECT_FILE_PATH)
-    
+@dataclass
+class ModelEvaluationConfig:
+    model_evaluation_main_folder:str = os.path.join(trainingpipelineconfig.artifcat,MODEL_EVALUTAION_MAIN_FOLDER)
+    model_evalutaion_model_acception_filepath:str = os.path.join(model_evaluation_main_folder,MODLE_EVALUTAION_MODEL_ACCEPTED_FILEPATH)

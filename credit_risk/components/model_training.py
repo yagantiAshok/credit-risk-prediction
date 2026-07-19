@@ -37,8 +37,8 @@ class ModelTraining:
     @staticmethod
     def extract_features(data:np.ndarray):
         try:
-            train_x = data[:,:-1]
-            train_y = data[:,-1]
+            train_x = data[:3000,:-1]
+            train_y = data[:3000,-1]
             return train_x,train_y
         except Exception as e:
             raise CustomException(e,sys)
