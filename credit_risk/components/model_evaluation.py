@@ -54,7 +54,8 @@ class ModelEvaluation:
             score = self.model_evaluation()
             model_evaluation_artifact = ModelEvaluationArtifact(
                 is_model_accepted=score<self.model_training_artifact.f1_score,
-                new_model=self.model_training_artifact.trained_model
+                new_model=self.model_training_artifact.trained_model,
+                changed_score=score - self.model_training_artifact.f1_score
             )
             return model_evaluation_artifact
         except Exception as e:

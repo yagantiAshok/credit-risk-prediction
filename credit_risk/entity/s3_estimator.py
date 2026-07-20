@@ -7,7 +7,7 @@ from credit_risk.entity.estimator import CreditriskModel
 import pandas as pd
 
 class S3estimator:
-    def __init__(self,bucket_name,model_path):
+    def __init__(self,bucket_name,model_path=None):
         self.s3_functionalities: S3Functionalities = S3Functionalities()
         self.bucket_name = bucket_name
         self.model_name = model_path
@@ -32,7 +32,7 @@ class S3estimator:
         try:
             if self.loaded_model is None:
                 self.loaded_model = self.load_model()
-            self.loaded_model.predict(data_frame=data)
+            return self.loaded_model.predict(data_frame=data)
         except Exception as e:
             raise CustomException(e,sys)
     

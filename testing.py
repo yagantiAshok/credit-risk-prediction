@@ -1,7 +1,7 @@
 
 
-# from credit_risk.utils.main_utils import read_yaml
-# from credit_risk.constants import SCHEMA_FILE
+from credit_risk.utils.main_utils import read_yaml
+from credit_risk.constants import SCHEMA_FILE
 
 # data = read_yaml(SCHEMA_FILE)
 
@@ -20,6 +20,13 @@
 # B = A
 # print(B.x)
 
-from credit_risk.model_factory.model_storage import models_dictionary
+# from credit_risk.model_factory.model_storage import models_dictionary
 
-print(models_dictionary["AdaBoostClassifier"])
+# print(models_dictionary["AdaBoostClassifier"])
+
+data = read_yaml(SCHEMA_FILE)
+
+# print(data.fields)
+
+for field in data.fields:
+    print(field["value"])

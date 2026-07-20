@@ -42,3 +42,7 @@ class ModelTrainingConfig:
 class ModelEvaluationConfig:
     model_evaluation_main_folder:str = os.path.join(trainingpipelineconfig.artifcat,MODEL_EVALUTAION_MAIN_FOLDER)
     model_evalutaion_model_acception_filepath:str = os.path.join(model_evaluation_main_folder,MODLE_EVALUTAION_MODEL_ACCEPTED_FILEPATH)
+@dataclass
+class ModelPusherConfig:
+    bucket_name = AWS_S3_BUSCKET_NAME
+    model_name = MODEL_NAME

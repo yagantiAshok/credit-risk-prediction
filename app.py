@@ -8,7 +8,8 @@ from credit_risk.entity.config_entity import (dataingestionconfig,
                                               DataValidationConfig,
                                               DataTransformationConfig,
                                               ModelTrainingConfig,
-                                              ModelEvaluationConfig)
+                                              ModelEvaluationConfig,
+                                              ModelPusherConfig)
 
 try:
     logger.info("Training Pipeline Started")
@@ -16,7 +17,8 @@ try:
                            data_validation_config=DataValidationConfig,
                            data_transformation_config=DataTransformationConfig,
                            model_training_config=ModelTrainingConfig,
-                           model_evaluation_config = ModelEvaluationConfig)
+                           model_evaluation_config = ModelEvaluationConfig,
+                           model_pusher_config=ModelPusherConfig)
     obj.run_pipeline()
     logger.info("Training pipeline ended")
 except Exception as e:

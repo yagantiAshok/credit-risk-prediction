@@ -32,7 +32,7 @@ class S3ConnectionManager:
             self.client = S3ConnectionManager.client
             self.resource = S3ConnectionManager.resource
 
-            logger.info("AWS connection succesfully Established")
+            logger.info(f"AWS S3 connection succesfully Established in {region} ")
 
         except Exception as e:
           raise CustomException(e,sys)

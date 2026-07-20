@@ -38,7 +38,7 @@ class S3Functionalities:
 
             logger.info("entered into get bucket function")
 
-            bucket = self.resources.Bucket(bucket_name)
+            bucket = self.resource.Bucket(bucket_name)
 
             logger.info("Got The Bucket")
 
