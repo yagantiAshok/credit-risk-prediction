@@ -26,18 +26,18 @@ user = { }
 for col in data.fields:
     user[col["name"]] = st.number_input(col["name"],min_value=col["min_value"],value=col["value"])
 
-# data = CustomerData(**user)
-# data_frame = data.convert_to_dataframe()
+data = CustomerData(**user)
+data_frame = data.convert_to_dataframe()
 
-# @st.cache_resource
-# def classifier():
-#     return CreditriskClassifier()
-# predcition = classifier()
-# credit_risk_class = predcition.predict(data=data_frame)[0]
+@st.cache_resource
+def classifier():
+    return CreditriskClassifier()
+predcition = classifier()
+credit_risk_class = predcition.predict(data=data_frame)[0]
 
-# if st.button("Predict"):
-#     if credit_risk_class == 1:
-#         st.error("Customer is Risky")
-#     else:
-#         st.error("Customer is not Risky")
+if st.button("Predict"):
+    if credit_risk_class == 1:
+        st.error("Customer is Risky")
+    else:
+        st.error("Customer is not Risky")
 

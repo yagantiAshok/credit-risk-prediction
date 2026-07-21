@@ -35,7 +35,7 @@ fields:
   - name: age
     min_value: 18
     value: 21
-  - name: NumberOfTime30-59DaysPastDueNotWorse
+  - name: NumberOfTime30to59DaysPastDueNotWorse
     min_value: 0
     value: 0
   - name: DebtRatio
@@ -50,10 +50,13 @@ fields:
   - name: NumberRealEstateLoansOrLines
     min_value: 0
     value: 0
-  - name: NumberOfTime60-89DaysPastDueNotWorse 
+  - name: NumberOfTime60to89DaysPastDueNotWorse
     min_value: 0
     value: 0
   - name: NumberOfDependents
+    min_value: 0
+    value: 0
+  - name: NumberOfTimes90DaysLate
     min_value: 0
     value: 0
 

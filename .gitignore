@@ -4,3 +4,4 @@ notebook/*.csv
 __pycache__/
 LOGGER
 Artifact/
+.env

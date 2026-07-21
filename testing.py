@@ -29,4 +29,4 @@ data = read_yaml(SCHEMA_FILE)
 # print(data.fields)
 
 for field in data.fields:
-    print(field["value"])
+    print(field["name"])
