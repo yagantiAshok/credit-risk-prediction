@@ -33,9 +33,10 @@ data_frame = data.convert_to_dataframe()
 def classifier():
     return CreditriskClassifier()
 predcition = classifier()
-credit_risk_class = predcition.predict(data=data_frame)[0]
 
 if st.button("Predict"):
+    
+    credit_risk_class = predcition.predict(data=data_frame)[0]
     if credit_risk_class == 1:
         st.error("Customer is Risky")
     else:
