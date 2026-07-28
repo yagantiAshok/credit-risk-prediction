@@ -29,16 +29,19 @@ for col in data.fields:
 data = CustomerData(**user)
 data_frame = data.convert_to_dataframe()
 
+st.write("step 1 Got the columns")
 @st.cache_resource
 def classifier():
     return CreditriskClassifier()
 predcition = classifier()
+st.write("step 2 Model loaded")
 
 if st.button("Predict"):
-    
     credit_risk_class = predcition.predict(data=data_frame)[0]
+    st.write("step 3 Model Predicted")
     if credit_risk_class == 1:
         st.error("Customer is Risky")
     else:
         st.error("Customer is not Risky")
+st.write("step 4 Predicted ")
 
