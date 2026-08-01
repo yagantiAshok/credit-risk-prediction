@@ -34,14 +34,14 @@ st.write("step 1 Got the columns")
 def classifier():
     return CreditriskClassifier()
 predcition = classifier()
-st.write("step 2 Model loaded")
 
 if st.button("Predict"):
+    st.write("step 2 clicked predict button")
     credit_risk_class = predcition.predict(data=data_frame)[0]
-    st.write("step 3 Model Predicted")
+    st.write("step 3 Model loaded")
     if credit_risk_class == 1:
         st.error("Customer is Risky")
     else:
         st.error("Customer is not Risky")
-st.write("step 4 Predicted ")
+    st.write("step 4 Predicted ")
 
