@@ -30,6 +30,4 @@ ipykernel==6.29.0
 imbalanced-learn==0.10.1 
 from-root
 
-plotly 
-streamlit-option-menu 
-streamlit-lottie
+plotly
